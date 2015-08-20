@@ -24,4 +24,4 @@ print
 print "The factors of the denominator are: "
 print denominatorFactors
 
-print "Program has completed."
+print "Program has completed"
