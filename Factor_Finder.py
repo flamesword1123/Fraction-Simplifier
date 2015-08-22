@@ -15,23 +15,40 @@ denominator = int(raw_input("Enter your denominator\n"))
 numeratorFactors = getFactors(numerator)
 denominatorFactors = getFactors(denominator)
 
-print "The factors of the numerator are: "
-print numeratorFactors
-print
-print "The factors of the denominator are: "
-print denominatorFactors
-
 for numOne in numeratorFactors:
 	for numTwo in denominatorFactors:
 		if numOne == numTwo:
 			GCF = numOne
 
-print GCF
-
 numerator = numerator/GCF
 denominator = denominator/GCF
 
 print "The simplified fraction is:"
+
+numLength = len(str(numerator))
+denomLength = len(str(denominator))
+
+dashes = ""
+
+
+if numLength == denomLength:
+	for i in range(0,numLength):
+		dashes = dashes + "-"
+elif numLength > denomLength:
+	for i in range(0,numLength):
+		dashes = dashes + "-"
+else:
+	for i in range(0,denomLength):
+		dashes = dashes + "-"
+print
+
+print "    ",
 print numerator
-print "----"
+
+print "    ",
+print dashes
+
+print "    ",
 print denominator
+
+print
